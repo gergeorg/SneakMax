@@ -22,9 +22,10 @@ a {
   text-decoration: none;
 }
 
-ul {
+.list-reset {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .is-outer {
@@ -53,6 +54,7 @@ ul {
 }
 
 .btn-reset {
+  padding: 0;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -61,9 +63,23 @@ ul {
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  max-width: 1200px;
+  max-width: 1210px;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: $grid-gap;
+}
+
+.title-lvl2 {
+  font-family: 'Intro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
 }

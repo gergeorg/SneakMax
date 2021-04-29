@@ -18,11 +18,24 @@ const notify = require('gulp-notify');
 const image = require('gulp-image');
 const { readFileSync } = require('fs');
 const concat = require('gulp-concat');
+const ttf2woff = require('gulp-ttf2woff')
+const ttf2woff2 = require('gulp-ttf2woff2')
 
 let isProd = false; // dev by default
 
 const clean = () => {
 	return del(['app/*'])
+}
+
+//функция по конвертации ttf в woff и woff2
+const fonts = () => {
+  src('./src/fonts/**.ttf')
+      .pipe(ttf2woff())
+      .pipe(dest('./app/fonts'))
+  return src('./src/fonts/**.ttf')
+      .pipe(ttf2woff2())
+      .pipe(dest('./app/fonts'))
+
 }
 
 //svg sprite
@@ -169,6 +182,8 @@ const toProd = (done) => {
   isProd = true;
   done();
 };
+
+exports.fonts = fonts
 
 exports.default = series(clean, htmlInclude, scripts, styles, resources, images, svgSprites, watchFiles);
 
