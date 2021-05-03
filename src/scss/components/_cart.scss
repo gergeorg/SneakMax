@@ -1,5 +1,7 @@
 .cart {
+  margin-left: var(--main-offset);
   &__btn {
+    position: relative;
     width: 20px;
     height: 20px;
 
@@ -9,5 +11,22 @@
       height: 100%;
       object-fit: cover;
     }
+  }
+
+  &__count {
+    position: absolute;
+    right: -6px;
+    bottom: -6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    min-width: 16px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    font-family: 'Intro Book';
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--color-white);
   }
 }

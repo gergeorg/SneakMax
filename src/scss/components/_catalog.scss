@@ -1,0 +1,66 @@
+.catalog {
+  padding: var(--section-offset) 0;
+
+  &__title {
+    margin: 0;
+    margin-bottom: var(--main-offset);
+    color: var(--color-main);
+  }
+
+  &__filter {
+    padding: var(--grid-gap);
+    grid-column: 3 span;
+    border-radius: 4px;
+    background-color: var(--color-bg);
+  }
+
+  &__filter-subtitle {
+    margin: 0;
+    margin-bottom: var(--grid-gap);
+    font-family: 'Intro Book', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &__filter-caption {
+    display: block;
+    margin-bottom: var(--small-offset);
+    font: var(--middle-book);
+  }
+
+  &__filter-property {
+    margin-bottom: var(--grid-gap);
+  }
+
+  &__sex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  &__goods {
+    grid-column: 9 span;
+  }
+
+  &__goods-list {
+    grid-template-columns: repeat(9, 1fr);
+  }
+
+  &__googs-item {
+    grid-column: 3 span
+  }
+}
