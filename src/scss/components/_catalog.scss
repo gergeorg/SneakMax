@@ -17,6 +17,12 @@
     background-color: var(--color-bg);
   }
 
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__filter-subtitle {
     margin: 0;
     margin-bottom: var(--grid-gap);
@@ -41,22 +47,15 @@
     justify-content: space-between;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  &__more {
+    margin-top: var(--main-offset);
+  }
 
   &__goods {
     grid-column: 9 span;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__goods-list {
@@ -67,7 +66,6 @@
     grid-column: 3 span
   }
 }
-
 
 .catalog-price {
   &__wrapper {
@@ -152,8 +150,8 @@
 
 .sizes-table {
   width: 100%;
-  border: 1px solid var(--color-cameo);
   border-collapse: collapse;
+
   caption {
     position: absolute;
     pointer-events: none;
@@ -161,14 +159,15 @@
   }
 
   td {
+    padding: 17px 5px;
     font-family: 'Intro Book', sans-serif;
     font-size: 16px;
     line-height: 16px;
     text-align: center;
     color: var(--color-main);
-
-    // border: 1px solid var(--color-cameo);
+    border: 1px solid var(--color-cameo);
   }
+
 
 
 }

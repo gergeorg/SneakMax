@@ -1,0 +1,42 @@
+.team {
+  padding: var(--section-offset);
+  background-color: var(--color-eastbay);
+  background-image: url(../img/team_bg.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  &__title {
+    margin-bottom: var(--main-offset);
+    color: var(--color-white);
+  }
+
+  &__list {
+    gap: var(--main-offset) var(--grid-gap);
+  }
+
+  &__item {
+    grid-column: 4 span;
+  }
+
+  &__img {
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: var(--grid-gap);
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: var(--grid-gap);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--color-white);
+  }
+
+  &__position {
+    display: block;
+    font-family: 'Intro Book', sans-serif;
+    font-weight: 400;
+    color: var(--color-white);
+  }
+}
