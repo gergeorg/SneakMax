@@ -1,4 +1,237 @@
 .prod-modal {
   width: 1140px;
+  padding: var(--main-offset);
+  border-radius: 4px;
 
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--main-offset);
+  }
+
+  &__video {
+    width: 100%;
+    height: 456px;
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: none;
+    }
+  }
+}
+
+
+.modal-slider {
+  margin-right: var(--grid-gap);
+  width: calc(50% - (var(--grid-gap) / 2));
+
+  &__container {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: var(--grid-gap);
+    font-size: 0;
+  }
+
+  &__image {
+    width: 100%;
+    max-height: 460px;
+    object-fit: cover;
+
+  }
+}
+
+.modal-preview {
+  display: grid;
+  grid-template-columns: repeat(6, 70px);
+  gap: var(--grid-gap);
+
+  &__item {
+    height: 75px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity .3s ease-in-out;
+
+    :hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.modal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: calc(50% - (var(--grid-gap) / 2));
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--main-offset);
+    font-family: 'Intro Book', sans-serif;
+    line-height: 16px;
+    color: var(--color-gray);
+  }
+
+  &__vendor {
+    margin-right: var(--main-offset);
+  }
+
+  &__quantity{
+    span {
+      color: var(--color-main);
+    }
+  }
+
+  &__title {
+    max-width: 430px;
+    margin: 0;
+    margin-bottom: var(--grid-gap);
+    font-family: 'Intro Book', sans-serif;
+    font-size: 24px;
+    line-height: 140%;
+    font-weight: 400;
+  }
+
+  &__rate {
+    margin-bottom: var(--grid-gap);
+  }
+
+  &__subtitle {
+    display: inline-block;
+    margin-bottom: var(--grid-gap);
+    font-family: 'Intro Book', sans-serif;
+    line-height: 16px;
+  }
+
+  &__sizes-list {
+    display: flex;
+    margin-bottom: var(--main-offset);
+  }
+
+  // &__wrapper {
+  //   margin-top: auto;
+  // }
+
+  &__price {
+    // margin-bottom: 75px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__current-price {
+    margin-right: var(--main-offset);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  &__old-price {
+    font-family: 'Intro Book', sans-serif;
+    color: var(--color-gray);
+  }
+
+  &__order {
+    margin-top: auto;
+    width: 83%;
+  }
+
+}
+
+.modal-sizes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &__item {
+    margin-bottom: var(--grid-gap);
+
+    &:not(:last-child) {
+      margin-right: var(--grid-gap);
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    width: 70px;
+    font-family: 'Intro Book', sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    border: 1px solid var(--color-gray);
+    border-radius: 4px;
+  }
+}
+
+.modal-note {
+  margin-top: var(--grid-gap);
+
+  &__item {
+    padding-left: 25px;
+    background-image: url(../img/note-icon.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 15px 12px;
+    font-family: 'Intro Book', sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    color : var(--color-gray);
+
+    &:not(:last-child) {
+      margin-bottom: var(--small-offset);
+    }
+  }
+}
+
+.prod-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--main-offset);
+
+  &__column {
+    width: calc(50% - (var(--grid-gap) / 2));
+
+    &:first-child {
+      margin-right: var(--grid-gap);
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: var(--grid-gap);
+    font-family: 'Intro Book', sans-serif;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  &__descr {
+    margin: 0;
+    max-width: 430px;
+    font-family: 'Intro Book', sans-serif;
+    line-height: 140%;
+  }
+}
+
+
+.prod-characteristics {
+  &__item {
+    font-family: 'Intro Book', sans-serif;
+    line-height: 16px;
+
+    &:not(:last-child) {
+      margin-bottom: var(--small-offset);
+    }
+  }
 }
